@@ -48,5 +48,8 @@
     <Compile Include="Schedule.cs" />
     <Compile Include="Shift.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="contributors.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
