@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="contributors.txt" />
+    <Content Include="Luana.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
