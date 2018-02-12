@@ -51,7 +51,6 @@
   <ItemGroup>
     <Content Include="AndreiR.txt" />
     <Content Include="contributors.txt" />
-    <Content Include="Cristi.txt" />
     <Content Include="Dana.txt" />
     <Content Include="Luana.txt" />
   </ItemGroup>
