@@ -16,6 +16,10 @@ namespace WeellOfFate
         Random rnd2 = new Random();//asta sa fie random2 pentru inginerul din tura 2
         #endregion
         #region constructor
+        public BAU()
+        {
+
+        }
         /// <summary>
         /// This constructor will initilze my list of engineers
         /// </summary>
