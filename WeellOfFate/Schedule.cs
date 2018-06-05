@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace WeellOfFate
 {
-    class Schedule
+    public class Schedule// I don't find at this moment an uses for this class. 
     {
-        public List<Shift> Shifts;
-
         static void BauShift()
         {
 
