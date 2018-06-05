@@ -1,0 +1,8 @@
+C:\Users\tony\Documents\GitHub\Amigo\ForTesting\bin\Debug\ForTesting.exe.config
+C:\Users\tony\Documents\GitHub\Amigo\ForTesting\bin\Debug\ForTesting.exe
+C:\Users\tony\Documents\GitHub\Amigo\ForTesting\bin\Debug\ForTesting.pdb
+C:\Users\tony\Documents\GitHub\Amigo\ForTesting\bin\Debug\WeellOfFate.dll
+C:\Users\tony\Documents\GitHub\Amigo\ForTesting\bin\Debug\WeellOfFate.pdb
+C:\Users\tony\Documents\GitHub\Amigo\ForTesting\obj\Debug\ForTesting.csprojResolveAssemblyReference.cache
+C:\Users\tony\Documents\GitHub\Amigo\ForTesting\obj\Debug\ForTesting.exe
+C:\Users\tony\Documents\GitHub\Amigo\ForTesting\obj\Debug\ForTesting.pdb

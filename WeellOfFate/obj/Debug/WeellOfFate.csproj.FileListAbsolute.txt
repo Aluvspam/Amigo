@@ -1,0 +1,5 @@
+C:\Users\tony\Documents\GitHub\Amigo\WeellOfFate\bin\Debug\WeellOfFate.dll
+C:\Users\tony\Documents\GitHub\Amigo\WeellOfFate\bin\Debug\WeellOfFate.pdb
+C:\Users\tony\Documents\GitHub\Amigo\WeellOfFate\obj\Debug\WeellOfFate.csprojResolveAssemblyReference.cache
+C:\Users\tony\Documents\GitHub\Amigo\WeellOfFate\obj\Debug\WeellOfFate.dll
+C:\Users\tony\Documents\GitHub\Amigo\WeellOfFate\obj\Debug\WeellOfFate.pdb
