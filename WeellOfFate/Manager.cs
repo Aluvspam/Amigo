@@ -16,9 +16,11 @@ namespace WeellOfFate
             role = Role;
         }
         #endregion
+        #region methods
         public static void InputData()
         {
 
         }
+        #endregion
     }
 }
