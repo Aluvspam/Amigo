@@ -24,7 +24,7 @@ namespace WeellOfFate
 
         }
         /// <summary>
-        /// aici construim angajatii
+        /// here we construct our employees
         /// </summary>
         /// <param name="N">Name of employee</param>
         /// <param name="ID">Id of employee</param>

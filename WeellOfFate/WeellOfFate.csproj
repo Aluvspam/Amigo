@@ -46,7 +46,7 @@
     <Compile Include="Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schedule.cs" />
-    <Compile Include="Shift.cs" />
+    <Compile Include="SupportDay.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="contributors.txt" />
