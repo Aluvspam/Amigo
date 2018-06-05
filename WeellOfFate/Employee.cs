@@ -6,18 +6,35 @@ using System.Threading.Tasks;
 
 namespace WeellOfFate
 {
-   public class Employee
+    public class Employee
     {
-        public string Name;
-        protected int id;
-        public string Role;
-
-        public Employee(string name, int no, string role)
+        #region fields
+        string name;
+        string role;
+        int id;
+        #endregion
+        #region proprieties
+        public string Name { get { return name; } set { name = value; } }
+        public string Role { get { return role; } set { role = value; } }
+        public int Id { get { return id; } set { id = value; } }
+        #endregion
+        #region constructors
+        public Employee()//un constructor gol, pentru situatile in care am nevoie doar sa instantiez un obiect de tip Employee
         {
-            name = Name;
-            no = id;
-            role = Role;
+
         }
-        
+        /// <summary>
+        /// aici construim angajatii
+        /// </summary>
+        /// <param name="N">Name of employee</param>
+        /// <param name="ID">Id of employee</param>
+        /// <param name="ROLE">Role of employee</param>
+        public Employee(string N, int ID, string ROLE)
+        {
+            Name = N;
+            Id = ID;
+            Role = ROLE;
+        }
+        #endregion
     }
 }

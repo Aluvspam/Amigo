@@ -8,11 +8,15 @@ namespace WeellOfFate
 {
     public class Engineer: Employee
     {
-        public Engineer(string name, int no, string role): base(name, no, role)
+        public Engineer() : base()
         {
-            name = Name;
-            no = id;
-            role = Role;
+
+        }
+        public Engineer(string name, int id, string role): base()
+        {
+            Name = name;
+            Id = id;
+            Role = role;
         }
     }
 }
