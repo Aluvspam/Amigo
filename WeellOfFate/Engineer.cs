@@ -19,7 +19,7 @@ namespace WeellOfFate
         /// <param name="name">Engineer Name</param>
         /// <param name="id">Engineer Id</param>
         /// <param name="role">Engineer Role</param>
-        public Engineer(string name, int id, string role): base()
+        public Engineer(string name, int id, string role) : base(name, id, role)
         {
             Name = name;
             Id = id;

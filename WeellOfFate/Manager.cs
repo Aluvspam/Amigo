@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace WeellOfFate
 {
-    public class Manager: Employee
+    public class Manager: Employee// I don't think that the Manager has a real role in this exercise
     {
+        #region constructor
         public Manager(string name, int no, string role) : base(name, no, role)
         {
             name = Name;
-            no = id;
+            no = Id;
             role = Role;
         }
+        #endregion
         public static void InputData()
         {
 
