@@ -30,12 +30,42 @@ namespace WeellOfFate
         }
         #endregion
         #region methods
-        public List<Engineer> RandomSelectEngineers()//metoda asta sa-mi scoata cei doi ingineri random, pentru tura 1 si pentru tura 2 din zi 
+        public List<Engineer> RandomSelectEngineers()//metoda aceasta imi va amesteca lista interna de ingineri
         {
-            List<Engineer> towEngineersForShift = new List<Engineer>();// my list of 2 engieers for the day shift (SupportDay)
-            //TO DO!
-            return towEngineersForShift;
+            List<Engineer> shuffledEngineers = new List<Engineer>();
+            shuffledEngineers = allEngineers;
+            int n = shuffledEngineers.Count;
+            for (int i = 0; i < n; i++)
+            {
+                int random = i + rnd1.Next(n - i);
+                // partea de jos e o schimbare ca la Bubble = se produce o inversare de la inginerul gasit in random cu inginerul aflat la index-ul i
+                var temp = shuffledEngineers[random];
+                shuffledEngineers[random] = shuffledEngineers[i];
+                shuffledEngineers[i] = temp;
+            }
+            return shuffledEngineers;
         }
+        #region METHODS TO ADD SHIFTS TO ENGINEERS
+        public List<Engineer> AddShifts()//by using modulo we will set the even numbers to FirstShift and odd numbers to SecondShift
+        {
+            List<Engineer> engineersShift = new List<Engineer>();
+            engineersShift = RandomSelectEngineers();//we will call again the RandomSelectEngineers(), we will run it again and the result will be added to engineersShift
+            for (int i = 0; i < engineersShift.Count; i++)
+            {
+
+                if (i % 2 == 0)
+                {
+                    engineersShift[i] = SupportDay.FirstShift;//daca e par indexul de inginer = vine de dimineata 
+                }
+                else
+                {
+                    engineersShift[i].Shift = SupportDay.SecondShift;//daca e impar indexul de inginer = vine de dupa masa
+
+                }
+            }
+            return engineersShift;
+        }
+        #endregion
         #endregion
     }
 }
