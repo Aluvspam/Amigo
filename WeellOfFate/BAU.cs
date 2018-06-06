@@ -52,20 +52,35 @@ namespace WeellOfFate
             engineersShift = RandomSelectEngineers();//we will call again the RandomSelectEngineers(), we will run it again and the result will be added to engineersShift
             for (int i = 0; i < engineersShift.Count; i++)
             {
-
                 if (i % 2 == 0)
                 {
-                    engineersShift[i] = SupportDay.FirstShift;//daca e par indexul de inginer = vine de dimineata 
+                    engineersShift[i].Shift = SupportDay.FirstShift;//daca e par indexul de inginer = vine de dimineata (FirstShift)
                 }
                 else
                 {
-                    engineersShift[i].Shift = SupportDay.SecondShift;//daca e impar indexul de inginer = vine de dupa masa
-
+                    engineersShift[i].Shift = SupportDay.SecondShift;//daca e impar indexul de inginer = vine de dupa masa (SecondShift)
                 }
             }
             return engineersShift;
         }
-        #endregion
-        #endregion
-    }
+        public List<Engineer> AddShifts(List<Engineer> list)//una indentica ca cea de sus, dar vreau sa-i adaug parametru ca sa vad daca o modifica si pe asta din nou cum face aia de sus
+        {
+            List<Engineer> engineersShift = new List<Engineer>();
+            engineersShift = list;// construim lista cu elementele deja amestecate fara a chema metoda din nou RandomSelectEngineers()
+            for (int i = 0; i < engineersShift.Count; i++)
+            {
+
+                if (i % 2 == 0)
+                {
+                    engineersShift[i].Shift = SupportDay.FirstShift;//daca e par indexul de inginer = vine de dimineata 
+                }
+                else
+                {
+                    engineersShift[i].Shift = SupportDay.SecondShift;//daca e impar indexul de inginer = vine de dupa masa
+                }
+            }
+            return engineersShift;
+            #endregion
+            #endregion
+        }
 }
