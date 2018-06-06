@@ -12,8 +12,6 @@ namespace WeellOfFate
         static Engineer part1DayEng;//un inginer si prima parte a zilei
         static Engineer part2DayEng;//un inginer si a doua parte a zilei
         public static Engineer[] dayOfWork = new Engineer[2] { part1DayEng, part2DayEng };//o zi de munca are 2 ingineri
-
-
         public Workflow(Engineer part1Day, Engineer part2Day)//un constructor care imi costruieste ziua de munca din 2 ingineri
         {
             part1DayEng = part1Day;
