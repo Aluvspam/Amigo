@@ -69,7 +69,6 @@ namespace WeellOfFate
             engineersShift = list;// construim lista cu elementele deja amestecate fara a chema metoda din nou RandomSelectEngineers()
             for (int i = 0; i < engineersShift.Count; i++)
             {
-
                 if (i % 2 == 0)
                 {
                     engineersShift[i].Shift = SupportDay.FirstShift;//daca e par indexul de inginer = vine de dimineata 
