@@ -6,24 +6,42 @@ using System.Threading.Tasks;
 
 namespace WeellOfFate
 {
-    public class Schedule//this will determine the work flow for a day/1week/2weeks of shifts for engineers
+    public class Schedule//this will determine the work flow for 1 day/1 week (5 days) of shifts for engineers
     {
-        //TO DO: trebuie sa-i mai bag implementare, si sa ma mai uit la proiectul ala geometry cum am facut segmentul din 2 puncte => ca si eu am 1 zi de lucru = formata din 2 ingineri... 
-        static Engineer part1DayEng;//un inginer si prima parte a zilei
-        static Engineer part2DayEng;//un inginer si a doua parte a zilei
-        public static Engineer[] dayOfWork = new Engineer[2] { part1DayEng, part2DayEng };//o zi de munca are 2 ingineri
-        public Schedule(Engineer part1Day, Engineer part2Day)//un constructor care imi costruieste ziua de munca din 2 ingineri
+        #region fields
+        WorkDay[] weekOfWork = new WorkDay[5]; // a work week has 5 days
+        #endregion
+        #region properties
+        public WorkDay[] WeekOfWork { get { return weekOfWork; } set { weekOfWork = value; } }
+        #endregion
+        #region methods
+        public void GetSchedule(List<Engineer> listOfEngineers)//takes a list of engineers and adds them to our array of WeekOfWork
         {
-            part1DayEng = part1Day;
-            part2DayEng = part2Day;
+            for (int i = 0; i < weekOfWork.Length; i++)//e ok si asa pentru ca o saptamana mereu va avea 10 ingineri, nu conteaza ca ei ar putea fi mai multi de 10 intr-un BAU pentru ca ei oricum sunt amestecati la inceput si exista posiblitatea ca cei de la indexul 10 sa fie selectati, e mai hardcodat dar e ok
+            {
+                switch (i)
+                {
+                    case 0:
+                        WeekOfWork[i] = new WorkDay(listOfEngineers[0], listOfEngineers[1]);
+                        break;
+                    case 1:
+                        WeekOfWork[i] = new WorkDay(listOfEngineers[2], listOfEngineers[3]);
+                        break;
+                    case 2:
+                        WeekOfWork[i] = new WorkDay(listOfEngineers[4], listOfEngineers[5]);
+                        break;
+                    case 3:
+                        WeekOfWork[i] = new WorkDay(listOfEngineers[6], listOfEngineers[7]);
+                        break;
+                    case 4:
+                        WeekOfWork[i] = new WorkDay(listOfEngineers[8], listOfEngineers[9]);
+                        break;
+                    default:
+                        Console.WriteLine("Error. Please verify...");
+                        break;
+                }
+            }
         }
-        static void BauShift()
-        {
-
-        }
-        public virtual void GetSchedule()
-        {
-
-        }
+        #endregion
     }
 }

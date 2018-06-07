@@ -13,7 +13,15 @@ namespace WeellOfFate
         Engineer secondEngineer;
         #endregion
         #region properties
-
+        public Engineer FirstEngineer { get { return firstEngineer; } set { firstEngineer = value; } }
+        public Engineer SecondEngineer { get { return secondEngineer; } set { secondEngineer = value; } }
+        #endregion
+        #region constructor
+        public WorkDay(Engineer firstShift, Engineer secondShift)
+        {
+            FirstEngineer = firstShift;
+            SecondEngineer = secondShift;
+        }
         #endregion
     }
 }
