@@ -23,7 +23,7 @@ namespace WeellOfFate
         {
             listaInternaBusiness = lista;
         }
-        public Schedule oZiDeLucru = new Schedule(listaInternaBusiness[0], listaInternaBusiness[1]);//cumva asta respecta prima cerinta, de o schimbare pe zi
+    //    public Schedule oZiDeLucru = new Schedule(listaInternaBusiness[0], listaInternaBusiness[1]);//cumva asta respecta prima cerinta, de o schimbare pe zi
 
         //public Workflow[] 5zile = new Workflow[5];
     }
