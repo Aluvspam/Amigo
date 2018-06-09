@@ -11,7 +11,7 @@ namespace WeellOfFate
         //TO DO: aici o sa avem legata cred, partea vizuala unde avem clasificati inginerii ce vor participa in ziua respectiva pe suport
         // ma gandesc aici sa adaug lista de ingineri
         #region fields
-        List<Engineer> allEngineers = new List<Engineer>();//lista interna de ingineri BAU
+        static List<Engineer> allEngineers = new List<Engineer>();//lista interna de ingineri BAU
         Random rnd1 = new Random();
         #endregion
         #region constructor
