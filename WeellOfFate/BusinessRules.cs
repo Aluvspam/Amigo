@@ -21,7 +21,7 @@ namespace WeellOfFate
         }
         #endregion
 
-        public void Show1WeekofWork()
+        public void Show1WeekofWork()//ASTA AR TREBUIE SA AIBA UN PARAMENTRU DE ARRAY DE ZILE DE MUNCA SI GATA... SI VERIFIC CU IF SI AIA E...
         {
             Console.WriteLine("In saptamana uratoare se vor prezenta in ture, in felul urmator: ");
             List<Engineer> listaAmestecata = myBAU.RandomSelectEngineers();
