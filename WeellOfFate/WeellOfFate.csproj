@@ -48,7 +48,7 @@
     <Compile Include="Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schedule.cs" />
-    <Compile Include="SupportDay.cs" />
+    <Compile Include="SupportShift.cs" />
     <Compile Include="WorkDay.cs" />
   </ItemGroup>
   <ItemGroup>

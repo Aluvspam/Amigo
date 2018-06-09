@@ -14,8 +14,14 @@ namespace WeellOfFate
         #region properties
         public WorkDay[] WeekOfWork { get { return weekOfWork; } set { weekOfWork = value; } }
         #endregion
+        #region constructor
+        public Schedule()
+        {
+
+        }
+        #endregion
         #region methods
-        public void GetSchedule(List<Engineer> listOfEngineers)//takes a list of engineers and adds them to our array of WeekOfWork
+        public WorkDay[] GetSchedule(List<Engineer> listOfEngineers)//takes a list of engineers and adds them to our array of WeekOfWork
         {
             for (int i = 0; i < weekOfWork.Length; i++)//e ok si asa pentru ca o saptamana mereu va avea 10 ingineri, nu conteaza ca ei ar putea fi mai multi de 10 intr-un BAU pentru ca ei oricum sunt amestecati la inceput si exista posiblitatea ca cei de la indexul 10 sa fie selectati, e mai hardcodat dar e ok
             {
@@ -37,10 +43,11 @@ namespace WeellOfFate
                         WeekOfWork[i] = new WorkDay(listOfEngineers[8], listOfEngineers[9]);
                         break;
                     default:
-                        Console.WriteLine("Error. Please verify...");
+                        Console.WriteLine("Error. Please verify..." + i);
                         break;
                 }
             }
+            return WeekOfWork;
         }
         #endregion
     }

@@ -12,8 +12,7 @@ namespace WeellOfFate
         // ma gandesc aici sa adaug lista de ingineri
         #region fields
         List<Engineer> allEngineers = new List<Engineer>();//lista interna de ingineri BAU
-        Random rnd1 = new Random();//asta sa fie random1 pentru inginerul din tura 1
-        Random rnd2 = new Random();//asta sa fie random2 pentru inginerul din tura 2
+        Random rnd1 = new Random();
         #endregion
         #region constructor
         public BAU()
@@ -30,7 +29,11 @@ namespace WeellOfFate
         }
         #endregion
         #region methods
-        public List<Engineer> RandomSelectEngineers()//metoda aceasta imi va amesteca lista interna de ingineri
+        /// <summary>
+        /// This method will mix up my internal list of engineers
+        /// </summary>
+        /// <returns></returns>
+        public List<Engineer> RandomSelectEngineers()
         {
             List<Engineer> shuffledEngineers = new List<Engineer>();
             shuffledEngineers = allEngineers;
@@ -46,36 +49,45 @@ namespace WeellOfFate
             return shuffledEngineers;
         }
         #region METHODS TO ADD SHIFTS TO ENGINEERS
+        /// <summary>
+        /// This method will call again RandomSelectEngineers(), and will run it again and the result will be added the shifts 
+        /// </summary>
+        /// <returns></returns>
         public List<Engineer> AddShifts()//by using modulo we will set the even numbers to FirstShift and odd numbers to SecondShift
         {
             List<Engineer> engineersShift = new List<Engineer>();
-            engineersShift = RandomSelectEngineers();//we will call again the RandomSelectEngineers(), we will run it again and the result will be added to engineersShift
+            engineersShift = RandomSelectEngineers();
             for (int i = 0; i < engineersShift.Count; i++)
             {
                 if (i % 2 == 0)
                 {
-                    engineersShift[i].Shift = SupportDay.FirstShift;//daca e par indexul de inginer = vine de dimineata (FirstShift)
+                    engineersShift[i].Shift = SupportShift.FirstShift;//daca e par indexul de inginer = vine de dimineata (FirstShift)
                 }
                 else
                 {
-                    engineersShift[i].Shift = SupportDay.SecondShift;//daca e impar indexul de inginer = vine de dupa masa (SecondShift)
+                    engineersShift[i].Shift = SupportShift.SecondShift;//daca e impar indexul de inginer = vine de dupa masa (SecondShift)
                 }
             }
             return engineersShift;
         }
-        public List<Engineer> AddShifts(List<Engineer> list)//una indentica ca cea de sus, dar vreau sa-i adaug parametru ca sa vad daca o modifica si pe asta din nou cum face aia de sus
+        /// <summary>
+        /// This method adds shift to the List of Engineers you provided it as parameter 
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        public List<Engineer> AddShifts(List<Engineer> list)
         {
             List<Engineer> engineersShift = new List<Engineer>();
-            engineersShift = list;// construim lista cu elementele deja amestecate fara a chema metoda din nou RandomSelectEngineers()
+            engineersShift = list;
             for (int i = 0; i < engineersShift.Count; i++)
             {
                 if (i % 2 == 0)
                 {
-                    engineersShift[i].Shift = SupportDay.FirstShift;//daca e par indexul de inginer = vine de dimineata 
+                    engineersShift[i].Shift = SupportShift.FirstShift;//daca e par indexul de inginer = vine de dimineata 
                 }
                 else
                 {
-                    engineersShift[i].Shift = SupportDay.SecondShift;//daca e impar indexul de inginer = vine de dupa masa
+                    engineersShift[i].Shift = SupportShift.SecondShift;//daca e impar indexul de inginer = vine de dupa masa
                 }
             }
             return engineersShift;
