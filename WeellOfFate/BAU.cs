@@ -11,7 +11,7 @@ namespace WeellOfFate
         //TO DO: aici o sa avem legata cred, partea vizuala unde avem clasificati inginerii ce vor participa in ziua respectiva pe suport
         // ma gandesc aici sa adaug lista de ingineri
         #region fields
-        static List<Engineer> allEngineers = new List<Engineer>();//lista interna de ingineri BAU
+        List<Engineer> allEngineers = new List<Engineer>();//lista interna de ingineri BAU - asta trebuia declarata statica 
         Random rnd1 = new Random();
         #endregion
         #region constructor
@@ -25,7 +25,7 @@ namespace WeellOfFate
         /// <param name="list"></param>
         public BAU(List<Engineer> list)// ma gandesc ca as avea nevoie de un constructor care sa imi ia ca parametru toti ingineri si sa imi puna in lista interna de ingineri din BAU - INTREBARE! Aici ce am facut e dependency injection??
         {
-            allEngineers = list;
+            allEngineers = list;  // = list;
         }
         #endregion
         #region methods
