@@ -10,14 +10,18 @@ namespace WeellOfFate
     {
         #region fields
         static List<Engineer> myEngineers = new List<Engineer>();
-        BAU myBAU = new BAU(myEngineers);
-        static  WorkDay[] myWeekOfWork = new WorkDay[5];
-        Schedule programul = new Schedule();
+        static BAU myBAU = new BAU(myEngineers);
+        static  WorkDay[] myWeekOfWork1 = new WorkDay[5];//first week
+        Schedule programul1 = new Schedule();// first week calendar 
+
+        static WorkDay[] myWeekOfWork2 = new WorkDay[5];//second week
+        Schedule programul2 = new Schedule();// second week calendar 
         #endregion
         #region constructor
         public BusinessRules(List<Engineer> list)
         {
             myEngineers = list;
+          
         }
         #endregion
 
@@ -26,40 +30,108 @@ namespace WeellOfFate
             Console.WriteLine("In saptamana uratoare se vor prezenta in ture, in felul urmator: ");
             List<Engineer> listaAmestecata = myBAU.RandomSelectEngineers();
             List<Engineer> listaAmestecataCuTure = myBAU.AddShifts(listaAmestecata);
-            myWeekOfWork = programul.GetSchedule(listaAmestecataCuTure);
+            myWeekOfWork1 = programul1.GetSchedule(listaAmestecataCuTure);
 
-            for (int i = 0; i < myWeekOfWork.Length; i++)
+            for (int i = 0; i < myWeekOfWork1.Length; i++)
             {
                 switch (i)
                 {
                     case 0:
                         Console.WriteLine("Ziua de Luni: ");
-                        Console.WriteLine("Prima tura: {0} a doua tura: {1}", myWeekOfWork[0].FirstEngineer.Name, myWeekOfWork[1].SecondEngineer.Name);
+                        Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[0].FirstEngineer.Name, myWeekOfWork1[0].FirstEngineer.Id, myWeekOfWork1[0].SecondEngineer.Name, myWeekOfWork1[0].SecondEngineer.Id);
                         break;
                     case 1:
                         Console.WriteLine("Ziua de Marti: ");
-                        Console.WriteLine("Prima tura: {0} a doua tura: {1}", myWeekOfWork[2].FirstEngineer.Name, myWeekOfWork[3].SecondEngineer.Name);
+                        Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[1].FirstEngineer.Name, myWeekOfWork1[1].FirstEngineer.Id, myWeekOfWork1[1].SecondEngineer.Name, myWeekOfWork1[1].SecondEngineer.Id);
                         break;
                     case 2:
                         Console.WriteLine("Ziua de Miercuri: ");
-                        Console.WriteLine("Prima tura: {0} a doua tura: {1}", myWeekOfWork[4].FirstEngineer.Name, myWeekOfWork[5].SecondEngineer.Name);
+                        Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[2].FirstEngineer.Name, myWeekOfWork1[2].FirstEngineer.Id, myWeekOfWork1[2].SecondEngineer.Name, myWeekOfWork1[2].SecondEngineer.Id);
                         break;
                     case 3:
                         Console.WriteLine("Ziua de Joi: ");
-                        Console.WriteLine("Prima tura: {0} a doua tura: {1}", myWeekOfWork[6].FirstEngineer.Name, myWeekOfWork[7].SecondEngineer.Name);
+                        Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[3].FirstEngineer.Name, myWeekOfWork1[3].FirstEngineer.Id, myWeekOfWork1[3].SecondEngineer.Name, myWeekOfWork1[3].SecondEngineer.Id); ;
                         break;
                     case 4:
                         Console.WriteLine("Ziua de Vineri: ");
-                        Console.WriteLine("Prima tura: {0} a doua tura: {1}", myWeekOfWork[8].FirstEngineer.Name, myWeekOfWork[9].SecondEngineer.Name);
+                        Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[4].FirstEngineer.Name, myWeekOfWork1[4].FirstEngineer.Id, myWeekOfWork1[4].SecondEngineer.Name, myWeekOfWork1[4].SecondEngineer.Id);
                         break;
                     default:
                         break;
                 }
             }
+    }
+        public void Show2WeeksOfWork()//si sa verifice conditia ca ziua precedenta de vineri sa nu se sincronizeze cu cei din ziua de luni 
+        {
+            Console.WriteLine("In urmatoarele doua saptamani se vor prezenta in ture, in felul urmator: ");
+            List<Engineer> lista1Amestecata = myBAU.RandomSelectEngineers();
+            List<Engineer> lista1AmestecataCuTure = myBAU.AddShifts(lista1Amestecata);
+            myWeekOfWork1 = programul1.GetSchedule(lista1AmestecataCuTure);
 
-            //TO DO: sa fac sa-ti arate pe 2 saptamana si sa veriffi daca inginerii de vineri, prima saptamana sa nu fie si in a doua saptamana luni
+            for (int i = 0; i < myWeekOfWork1.Length; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        Console.WriteLine("Ziua de Luni: ");
+                        Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[0].FirstEngineer.Name, myWeekOfWork1[0].FirstEngineer.Id, myWeekOfWork1[0].SecondEngineer.Name, myWeekOfWork1[0].SecondEngineer.Id);
+                        break;
+                    case 1:
+                        Console.WriteLine("Ziua de Marti: ");
+                        Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[1].FirstEngineer.Name, myWeekOfWork1[1].FirstEngineer.Id, myWeekOfWork1[1].SecondEngineer.Name, myWeekOfWork1[1].SecondEngineer.Id);
+                        break;
+                    case 2:
+                        Console.WriteLine("Ziua de Miercuri: ");
+                        Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[2].FirstEngineer.Name, myWeekOfWork1[2].FirstEngineer.Id, myWeekOfWork1[2].SecondEngineer.Name, myWeekOfWork1[2].SecondEngineer.Id);
+                        break;
+                    case 3:
+                        Console.WriteLine("Ziua de Joi: ");
+                        Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[3].FirstEngineer.Name, myWeekOfWork1[3].FirstEngineer.Id, myWeekOfWork1[3].SecondEngineer.Name, myWeekOfWork1[3].SecondEngineer.Id); ;
+                        break;
+                    case 4:
+                        Console.WriteLine("Ziua de Vineri: ");
+                        Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[4].FirstEngineer.Name, myWeekOfWork1[4].FirstEngineer.Id, myWeekOfWork1[4].SecondEngineer.Name, myWeekOfWork1[4].SecondEngineer.Id);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            //acum facem un do while ce ne verifica ultimul precedent cu primul 
+            List<Engineer> lista2AmestecataCuTure = myBAU.AddShifts();//WE will pass again the random method
+            myWeekOfWork2 = programul2.GetSchedule(lista2AmestecataCuTure);
 
-
+            while (myWeekOfWork2[0].FirstEngineer.Id != myWeekOfWork1[4].FirstEngineer.Id || myWeekOfWork2[0].SecondEngineer.Id != myWeekOfWork1[4].SecondEngineer.Id || myWeekOfWork2[0].SecondEngineer.Id != myWeekOfWork1[4].FirstEngineer.Id)
+            {
+                for (int i = 0; i < myWeekOfWork1.Length; i++)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            Console.WriteLine("Ziua de Luni: ");
+                            Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[0].FirstEngineer.Name, myWeekOfWork1[0].FirstEngineer.Id, myWeekOfWork1[0].SecondEngineer.Name, myWeekOfWork1[0].SecondEngineer.Id);
+                            break;
+                        case 1:
+                            Console.WriteLine("Ziua de Marti: ");
+                            Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[1].FirstEngineer.Name, myWeekOfWork1[1].FirstEngineer.Id, myWeekOfWork1[1].SecondEngineer.Name, myWeekOfWork1[1].SecondEngineer.Id);
+                            break;
+                        case 2:
+                            Console.WriteLine("Ziua de Miercuri: ");
+                            Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[2].FirstEngineer.Name, myWeekOfWork1[2].FirstEngineer.Id, myWeekOfWork1[2].SecondEngineer.Name, myWeekOfWork1[2].SecondEngineer.Id);
+                            break;
+                        case 3:
+                            Console.WriteLine("Ziua de Joi: ");
+                            Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[3].FirstEngineer.Name, myWeekOfWork1[3].FirstEngineer.Id, myWeekOfWork1[3].SecondEngineer.Name, myWeekOfWork1[3].SecondEngineer.Id); ;
+                            break;
+                        case 4:
+                            Console.WriteLine("Ziua de Vineri: ");
+                            Console.WriteLine("Prima tura: {0} ID: {1}, a doua tura: {2} ID: {3}", myWeekOfWork1[4].FirstEngineer.Name, myWeekOfWork1[4].FirstEngineer.Id, myWeekOfWork1[4].SecondEngineer.Name, myWeekOfWork1[4].SecondEngineer.Id);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+               return; //sa imi ruleze o singura data 
+            }
         }
     }
 }
