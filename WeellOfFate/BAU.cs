@@ -50,7 +50,7 @@ namespace WeellOfFate
         }
         #region METHODS TO ADD SHIFTS TO ENGINEERS
         /// <summary>
-        /// This method will call again RandomSelectEngineers(), and will run it again and the result will be added the shifts 
+        /// This method will call again RandomSelectEngineers(), will run it again and to the result will then be added the shifts 
         /// </summary>
         /// <returns></returns>
         public List<Engineer> AddShifts()//by using modulo we will set the even numbers to FirstShift and odd numbers to SecondShift
