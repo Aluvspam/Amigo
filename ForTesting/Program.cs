@@ -14,7 +14,7 @@ namespace ForTesting
             //sa facem lista de 10 ingineri
 
              List<Engineer>  initialListOfEngineers = new List<Engineer>() { new Engineer("Andrei", 00, "Engineers"), new Engineer("Dragos", 01, "Inginer"),
-            new Engineer("Elena", 02, "Inginer"), new Engineer("Ion", 03, "Inginer"), new Engineer("Cosmin", 04, "Inginer"), new Engineer("Ene", 05, "Inginer"),
+            new Engineer("Elena", 02, "Inginer"), new Engineer("Ion", 03, "Inginer"), new Engineer("Cristi", 04, "Inginer"), new Engineer("Ene", 05, "Inginer"),
              new Engineer("Cosmin", 06, "Inginer"), new Engineer("Andreea", 07, "Inginer"), new Engineer("Claudiu", 08, "Inginer"), new Engineer("Eduard", 09, "Inginer")
             };
             Console.WriteLine("Lista initiala de ingineri");
