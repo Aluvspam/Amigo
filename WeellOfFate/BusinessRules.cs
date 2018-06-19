@@ -63,7 +63,7 @@ namespace WeellOfFate
         }
         #endregion
         #region SHOW 2 WEEKS OF WORK
-        public void Show2WeeksOfWork()//si sa verifice conditia ca ziua precedenta de vineri sa nu se sincronizeze cu cei din ziua de luni - MAI E DE LUCRU!! 
+        public void Show2WeeksOfWork() 
         {
             Console.WriteLine("In urmatoarele doua saptamani se vor prezenta in ture, in felul urmator: ");
             List<Engineer> lista1Amestecata = myBAU.RandomSelectEngineers();
@@ -100,7 +100,7 @@ namespace WeellOfFate
             }
             List<Engineer> lista2AmestecataCuTure = myBAU.AddShifts();//WE will pass again the random method
             myWeekOfWork2 = programul2.GetSchedule(lista2AmestecataCuTure);
-            //verificam daca ultimi nu sunt egali cu primi sapt 2
+            //we verify if the last engineers from Friday are the same with the first engineers from Monday
             while ((myWeekOfWork1[4].FirstEngineer.Id == myWeekOfWork2[0].FirstEngineer.Id) || (myWeekOfWork1[4].FirstEngineer.Id == myWeekOfWork2[0].SecondEngineer.Id) ||
                 (myWeekOfWork1[4].SecondEngineer.Id == myWeekOfWork2[0].FirstEngineer.Id) || (myWeekOfWork1[4].SecondEngineer.Id == myWeekOfWork2[0].SecondEngineer.Id))
             {
