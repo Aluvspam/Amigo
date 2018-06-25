@@ -17,6 +17,8 @@ namespace ForTesting
             new Engineer("Elena", 02, "Inginer"), new Engineer("Ion", 03, "Inginer"), new Engineer("Cristi", 04, "Inginer"), new Engineer("Ene", 05, "Inginer"),
              new Engineer("Cosmin", 06, "Inginer"), new Engineer("Andreea", 07, "Inginer"), new Engineer("Claudiu", 08, "Inginer"), new Engineer("Eduard", 09, "Inginer")
             };
+            initialListOfEngineers.Add(new Engineer("Ivan", 22, "Hefe"));
+            initialListOfEngineers.Add(new Engineer("Codrut", 15, "Dev Ops"));
             Console.WriteLine("Lista initiala de ingineri");
             foreach (var item in initialListOfEngineers)
             {
