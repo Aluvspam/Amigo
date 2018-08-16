@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeellOfFate
 {
-    public class Engineer: Employee
+    public class Engineer : Employee
     {
         #region constructors
         public Engineer() : base()
@@ -21,9 +21,9 @@ namespace WeellOfFate
         /// <param name="role">Engineer Role</param>
         public Engineer(string name, int id, string role) : base(name, id, role)
         {
-            Name = name;
-            Id = id;
-            Role = role;
+            //Name = name;
+            //Id = id;
+            //Role = role;
         }
         #endregion
     }
