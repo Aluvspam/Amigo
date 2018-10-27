@@ -3,3 +3,8 @@ C:\Users\tony\Documents\GitHub\Amigo\WeellOfFate\bin\Debug\WeellOfFate.pdb
 C:\Users\tony\Documents\GitHub\Amigo\WeellOfFate\obj\Debug\WeellOfFate.csprojResolveAssemblyReference.cache
 C:\Users\tony\Documents\GitHub\Amigo\WeellOfFate\obj\Debug\WeellOfFate.dll
 C:\Users\tony\Documents\GitHub\Amigo\WeellOfFate\obj\Debug\WeellOfFate.pdb
+C:\Users\AndreiR\Source\Repos\Amigo_OnClass\WeellOfFate\bin\Debug\WeellOfFate.dll
+C:\Users\AndreiR\Source\Repos\Amigo_OnClass\WeellOfFate\bin\Debug\WeellOfFate.pdb
+C:\Users\AndreiR\Source\Repos\Amigo_OnClass\WeellOfFate\obj\Debug\WeellOfFate.csprojResolveAssemblyReference.cache
+C:\Users\AndreiR\Source\Repos\Amigo_OnClass\WeellOfFate\obj\Debug\WeellOfFate.dll
+C:\Users\AndreiR\Source\Repos\Amigo_OnClass\WeellOfFate\obj\Debug\WeellOfFate.pdb
